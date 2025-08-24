@@ -28,4 +28,4 @@ jobs:
         with:
           context: ./front-app
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/front-poc
+          tags: ${{ secrets.DOCKER_HUB_USERNAME_POC }}/front-poc
