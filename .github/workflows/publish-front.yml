@@ -23,9 +23,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build and push Docker image for front-app
+      - name: Build and push Docker image for front
         uses: docker/build-push-action@v6
         with:
-          context: ./front-app
+          context: ./front
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME_POC }}/front-poc
