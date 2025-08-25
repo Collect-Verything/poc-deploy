@@ -6,7 +6,6 @@ function App() {
     const[message, setMessage] = useState('');
 
     async function fetchWithFallback() {
-            console.warn("Échec sur deploy-service, tentative sur localhost...", err);
             try {
                 const res = await fetch("http://localhost:3001/");
                 setMessage(res.statusText);
