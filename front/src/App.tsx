@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import SimpleSiteConfigForm from "./condif";
+import SimpleSiteConfigForm from "./config";
 
 function App() {
 
