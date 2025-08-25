@@ -1,16 +1,13 @@
 FROM node:20-alpine
 
-RUN apk add --no-cache netcat-openbsd
-RUN apk add --no-cache openssl
+RUN apk add --no-cache netcat-openbsd openssl
 
-WORKDIR /DEPLOY-SERVICE
+WORKDIR /deploy-service
 
-COPY package.json ./
-
-RUN npm install
+COPY package*.json ./
+RUN npm ci
 
 COPY . .
 
 EXPOSE 3001
-
-CMD ["npm", "run" ,"start:debug"]
+CMD ["npm", "run", "start:debug"]
