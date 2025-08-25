@@ -20,10 +20,6 @@ function App() {
         fetchWithFallback()
     })
 
-    if (!message) return <p>Loading ...</p>
-    // if(!message) return <CircularProgress variant="solid" />
-
-
     return (
         <div className="App">
             <header className="App-header">
