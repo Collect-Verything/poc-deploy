@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
+import SimpleSiteConfigForm from "./condif";
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
     async function fetchWithFallback() {
         try {
             const res = await fetch("http://localhost:3001/");
-            setMessage(res.statusText);
+            const body = await res.text();
+            setMessage(body);
         } catch (err2) {
             console.error("Échec sur localhost aussi :", err2);
             setMessage("Aucune réponse du backend");
@@ -29,14 +31,7 @@ function App() {
                         <p>{message}</p>
                     }
                 </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
+                <SimpleSiteConfigForm/>
             </header>
         </div>
     );
