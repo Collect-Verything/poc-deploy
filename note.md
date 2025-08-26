@@ -14,7 +14,7 @@ docker version
 
 # front co:
 
-ssh -i "poc.pem" ec2-user@ec2-16-170-245-80.eu-north-1.compute.amazonaws.com
+ssh -i "poc.pem" ec2-user@ec2-16-170-245-80.eu-north-1.compute.amazonaws.com changer
 
 ## clean:
 
