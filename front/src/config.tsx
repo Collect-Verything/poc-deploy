@@ -48,7 +48,7 @@ export default function SimpleSiteConfigForm() {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(preview),
-        })
+        }).catch(console.error);
         setDisplayWebsite(true);
     }
 
@@ -75,7 +75,7 @@ export default function SimpleSiteConfigForm() {
                                                 value={value}
                                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setter(e.target.value)}
                                                 required={type !== "color"}
-                                                InputLabelProps={type === "color" ? {shrink: true} : undefined}
+                                                // InputLabelProps={type === "color" ? {shrink: true} : undefined}
                                             />
                                         </Grid>
                                     ))}
