@@ -13,7 +13,6 @@ export class AppController {
 
     @Post()
     createConfig(@Body() dto: CreateConfigDto) {
-      console.log(dto);
         return {
             message: 'Configuration reçue avec succès',
             payload: dto,

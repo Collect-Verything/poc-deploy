@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import './App.css';
 import SimpleSiteConfigForm from "./config";
 
@@ -17,20 +17,21 @@ function App() {
         }
     }
 
-
-    useEffect(() => {
+    const connectDeployService = ()=>{
         fetchWithFallback()
-    })
+    }
+
+
 
     return (
         <div className="App">
             <header className="App-header">
-                <p>
+                <h1>
                     {!message ?
-                        <p>Loading ...</p> :
+                        <button onClick={connectDeployService}>Try to connect</button> :
                         <p>{message}</p>
                     }
-                </p>
+                </h1>
                 <SimpleSiteConfigForm/>
             </header>
         </div>
