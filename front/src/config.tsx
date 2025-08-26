@@ -40,11 +40,12 @@ export default function SimpleSiteConfigForm() {
             primaryColor,
         };
     }
+    const API = process.env.REACT_APP_API_BASE!;
 
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         setPreview(buildPayload());
-        fetch("http://localhost:3001", {
+        fetch(`${API}/`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(preview),

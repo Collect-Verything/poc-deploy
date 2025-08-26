@@ -55,3 +55,8 @@ cansefr/deploy-service:latest
 
 
 ## Attention http et pas https
+
+
+## htop 
+sudo dnf update -y
+sudo dnf install -y htop
